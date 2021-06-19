@@ -1,4 +1,4 @@
-﻿#include <exception>
+#include <exception>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -183,7 +183,7 @@ main()
             std::cout << "Выделим для него память" << std::endl;
             some_pointer = new int[100];
             std::cout << "Но затем что-то вызывает исключение." << std::endl;
-            throw "<whatever exception>";
+            throw " exception ";
             delete[] some_pointer;
         }
         catch (const char* error) 
@@ -198,7 +198,7 @@ main()
             std::cout << "В RAII мы используем std::vector вместо массива в стиле C" << std::endl;
             std::vector<int> vec(100);
             std::cout << "И если что-то вызывает исключение." << std::endl;
-            throw "<whatever exception>";
+            throw " exception ";
         }
         catch (const char* error) 
         {
@@ -212,7 +212,7 @@ main()
             std::cout << "В RAII мы используем vector вместо массива в стиле C" << std::endl;
             Vector<int> vec(100);
             std::cout << "И если что-то вызывает исключение" << std::endl;
-            throw "<whatever exception>";
+            throw " exception ";
         }
         catch (const char* error) 
         {
